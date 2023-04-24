@@ -49,7 +49,7 @@ public class RegresInTests {
         Assertions.assertResponseCodeEquals(responseCreateUser, 201);
         Assertions.assertJsonHasField(responseCreateUser, "id");
         Assertions.assertJsonHasField(responseCreateUser, "createdAt");
-        assertAll("Checking actual and expected username, firstName, lastName and email",
+        assertAll("Checking actual and expected username, name, email, job and avatar",
                 () -> Assertions.assertJsonByName(responseCreateUser, "name", name),
                 () -> Assertions.assertJsonByName(responseCreateUser, "username", username),
                 () -> Assertions.assertJsonByName(responseCreateUser, "job", job),
